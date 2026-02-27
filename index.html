@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV • Matías Miguel Amprimo</title>
+  <meta name="description" content="Currículum Vitae de Matías Miguel Amprimo — Técnico agropecuario en formación, experiencia rural y operativa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="noise" aria-hidden="true"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Currículum Vitae</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn--primary" href="./Currículum Vitae.pdf" download>
+          Descargar PDF
+        </a>
+        <button class="btn" id="btnPrint" type="button">Imprimir</button>
+        <button class="btn" id="btnTheme" type="button" aria-pressed="false">Modo</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <div class="hero__left">
+        <div class="avatar">
+          <!-- Colocá una foto real en la carpeta con nombre: foto.jpg -->
+          <img src="./foto.jpg" alt="Foto de Matías Miguel Amprimo" onerror="this.src='./placeholder.jpg'; this.onerror=null;" />
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="kicker">Perfil profesional</div>
+        <h1 class="title">Matías Miguel Amprimo</h1>
+
+        <p class="summary">
+          Técnico agropecuario en formación, con experiencia en tareas rurales, monitoreo de cultivos,
+          cosecha de ensayos y muestreo de suelos. Capacitado como clasificador de cereales y con
+          conocimiento en mantenimiento y tareas operativas. Busco incorporarme para aplicar y seguir
+          desarrollando mis conocimientos técnicos.
+        </p>
+
+        <div class="chips" aria-label="Etiquetas de perfil">
+          <span class="chip">Agro • Campo</span>
+          <span class="chip">Muestreo de suelos</span>
+          <span class="chip">Monitoreo de cultivos</span>
+          <span class="chip">Operativo / Mantenimiento</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="card">
+        <h2 class="h2">Datos personales</h2>
+
+        <div class="info">
+          <div class="info__row">
+            <span class="info__label">Dirección</span>
+            <span class="info__value">Calle 52 N° 7800, Necochea</span>
+          </div>
+          <div class="info__row">
+            <span class="info__label">Teléfono</span>
+            <a class="info__value link" href="tel:+542262576623">(2262) 576623</a>
+          </div>
+          <div class="info__row">
+            <span class="info__label">Email</span>
+            <a class="info__value link" href="mailto:matiamprimo@gmail.com">matiamprimo@gmail.com</a>
+          </div>
+          <div class="info__row">
+            <span class="info__label">Nacimiento</span>
+            <span class="info__value">17 de marzo de 1997</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="h3">Otros</h3>
+        <ul class="list">
+          <li><strong>Disponibilidad:</strong> Inmediata</li>
+          <li><strong>Movilidad propia:</strong> Sí</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Formación académica</h2>
+
+        <div class="timeline">
+          <article class="titem">
+            <div class="titem__dot" aria-hidden="true"></div>
+            <div class="titem__body">
+              <div class="titem__title">Tecnicatura Superior en Producción Agrícola Ganadera</div>
+              <div class="titem__meta">ISFDyT N° 31 • En curso</div>
+            </div>
+          </article>
+
+          <article class="titem">
+            <div class="titem__dot" aria-hidden="true"></div>
+            <div class="titem__body">
+              <div class="titem__title">Práctico Clasificador de Cereales y Oleaginosas</div>
+              <div class="titem__meta">CFP N° 401 • Finalizado</div>
+            </div>
+          </article>
+
+          <article class="titem">
+            <div class="titem__dot" aria-hidden="true"></div>
+            <div class="titem__body">
+              <div class="titem__title">Auxiliar Mecánico de Automotores</div>
+              <div class="titem__meta">CFP N° 403 • Finalizado</div>
+            </div>
+          </article>
+
+          <article class="titem">
+            <div class="titem__dot" aria-hidden="true"></div>
+            <div class="titem__body">
+              <div class="titem__title">Bachiller en Ciencias Naturales</div>
+              <div class="titem__meta">E.E.M N°2 F. Ameghino • 2015</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card card--full">
+        <div class="sectionHead">
+          <h2 class="h2">Experiencia laboral destacada</h2>
+          <div class="small"></div>
+        </div>
+
+        <div class="exp">
+          <article class="exp__item">
+            <div class="exp__left">
+              <div class="badge">2023</div>
+            </div>
+            <div class="exp__right">
+              <h3 class="h3">Viterra — Operario</h3>
+              <ul class="list">
+                <li>Manejo de impulsora</li>
+                <li>Mantenimiento general del predio</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp__item">
+            <div class="exp__left">
+              <div class="badge">2022</div>
+            </div>
+            <div class="exp__right">
+              <h3 class="h3">Agroestudio Viento Sur SRL — Peón rural</h3>
+              <ul class="list">
+                <li>Monitoreo de bicho bolita y babosa</li>
+                <li>Muestreo de suelos</li>
+                <li>Control de cosecha y ensayos</li>
+              </ul>
+
+              <div class="spacer"></div>
+
+              <h3 class="h3">Ing. Emilia Deserti & Ing. Andrea Rossi — Peón rural</h3>
+              <ul class="list">
+                <li>Cosecha de ensayos</li>
+                <li>Muestreo de suelos</li>
+                <li>Trilla de ensayos</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp__item">
+            <div class="exp__left">
+              <div class="badge">2021</div>
+            </div>
+            <div class="exp__right">
+              <h3 class="h3">Buck Semillas S.A. — Campo Experimental</h3>
+              <ul class="list">
+                <li>Participación en siembra y cosecha</li>
+                <li>Trabajo en laboratorio</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp__item">
+            <div class="exp__left">
+              <div class="badge">—</div>
+            </div>
+            <div class="exp__right">
+              <h3 class="h3">Unilever — Repositor externo</h3>
+              <ul class="list">
+                <li>Reposición de productos</li>
+                <li>Control de stock</li>
+              </ul>
+
+              <div class="spacer"></div>
+
+              <h3 class="h3">Grupo Ayudín — Repositor externo</h3>
+              <ul class="list">
+                <li>Reposición de productos</li>
+                <li>Control de stock</li>
+              </ul>
+
+              <div class="spacer"></div>
+
+              <h3 class="h3">Distribuidora Grupo del Mar (Quilmes) — Repositor externo</h3>
+              <ul class="list">
+                <li>Reposición de productos</li>
+                <li>Control de stock</li>
+                <li>Reparto de mercadería</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Habilidades</h2>
+        <div class="skillGrid">
+          <div class="skill">
+            <div class="skill__name">Microsoft Office / Excel</div>
+            <div class="skill__level">Nivel bueno</div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">Inglés</div>
+            <div class="skill__level">Nivel básico</div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">Maquinaria rural</div>
+            <div class="skill__level">Operación básica</div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">Trabajo en equipo</div>
+            <div class="skill__level">Buen desempeño</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="note">
+          Consejo: si querés que se vea todavía más “premium”, agregá 1–2 líneas de “logros” medibles
+          (por ejemplo: hectáreas monitoreadas, campañas, tipo de ensayos, etc.).
+        </p>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Contacto rápido</h2>
+        <p class="small">
+          Botones listos para WhatsApp / mail / llamada.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--soft" id="btnWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--soft" href="mailto:matiamprimo@gmail.com">Enviar email</a>
+          <a class="btn btn--soft" href="tel:+542262576623">Llamar</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="foot small">
+          Este sitio muestra el contenido del CV y permite descargar el PDF original.
+        </p>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© <span id="year"></span> • CV Web</span>
+        <span class="muted">Diseño moderno • Blanco / gris</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
