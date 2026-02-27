@@ -1,6 +1,17 @@
 (() => {
   const $ = (sel) => document.querySelector(sel);
 
+    // ✅ Ajuste automático del padding según la altura real del encabezado
+  const topbar = document.querySelector(".topbar");
+  const setTopbarHeight = () => {
+    if (!topbar) return;
+    const h = topbar.offsetHeight;
+    document.documentElement.style.setProperty("--topbar-h", `${h}px`);
+  };
+
+  setTopbarHeight();
+  window.addEventListener("resize", setTopbarHeight);
+
   // Año footer
   const year = new Date().getFullYear();
   const elYear = $("#year");
@@ -38,3 +49,39 @@
     });
   }
 })();
+
+  // ✅ Menú hamburguesa (mobile)
+  const btnMenu = document.querySelector("#btnMenu");
+  const actionsMenu = document.querySelector("#actionsMenu");
+
+  const closeMenu = () => {
+    if (!actionsMenu || !btnMenu) return;
+    actionsMenu.classList.remove("is-open");
+    btnMenu.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = () => {
+    if (!actionsMenu || !btnMenu) return;
+    const open = actionsMenu.classList.toggle("is-open");
+    btnMenu.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  if (btnMenu && actionsMenu) {
+    btnMenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Cerrar tocando afuera
+    document.addEventListener("click", (e) => {
+      if (!actionsMenu.classList.contains("is-open")) return;
+      const target = e.target;
+      if (!(target instanceof Node)) return;
+      if (!actionsMenu.contains(target) && !btnMenu.contains(target)) closeMenu();
+    });
+
+    // Cerrar al cambiar tamaño a desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 640) closeMenu();
+    });
+  }

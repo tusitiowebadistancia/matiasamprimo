@@ -421,3 +421,79 @@ img { max-width: 100%; height: auto; }
 /* Prevent any horizontal scroll */
 html, body { overflow-x: hidden; }
 .container, .topbar__inner { max-width: 1100px; }
+
+/* ===== Header con menú hamburguesa ===== */
+
+.hamburger{
+  display:none;
+  width:42px;
+  height:42px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.6);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:0;
+}
+[data-theme="dark"] .hamburger{ background:rgba(17,19,26,.7); }
+
+.hamburger .bar{
+  display:block;
+  width:18px;
+  height:2px;
+  border-radius:999px;
+  background:var(--text);
+  opacity:.9;
+}
+
+/* Menú acciones base */
+.actions--menu{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+/* ✅ Mobile: ocultamos botones y mostramos hamburguesa */
+@media (max-width: 640px){
+  .hamburger{ display:flex; }
+
+  .actions--menu{
+    position:absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, 92vw);
+    display:none;              /* cerrado */
+    flex-direction:column;
+    gap:10px;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:var(--card);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+
+  .topbar__inner{
+    position:relative; /* para anclar el dropdown */
+    align-items:center;
+  }
+
+  .actions--menu.is-open{ display:flex; }
+
+  .actions--menu .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
+/* ===== Calibración con foto: subir “medio cm” (~20px) ===== */
+.avatar{
+  position: relative;
+  top: -20px; /* ✅ sube la foto */
+}
+@media (max-width: 640px){
+  .avatar{ top: -18px; } /* un poquito menos en mobile */
+}

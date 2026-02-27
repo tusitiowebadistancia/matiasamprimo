@@ -16,19 +16,27 @@
   </div>
 
   <header class="topbar">
-    <div class="topbar__inner">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Currículum Vitae</span>
-      </div>
-
-      <div class="actions actions--wrap">
-  <a class="btn btn--primary" href="./Currículum Vitae.pdf" download>Descargar PDF</a>
-  <button class="btn" id="btnPrint" type="button">Imprimir</button>
-  <button class="btn" id="btnTheme" type="button" aria-pressed="false">Modo</button>
-</div>
+  <div class="topbar__inner">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Currículum Vitae</span>
     </div>
-  </header>
+
+    <!-- ✅ Botón hamburguesa (3 barras) -->
+    <button class="hamburger" id="btnMenu" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+
+    <!-- ✅ Acciones (desktop) / menú desplegable (mobile) -->
+    <nav class="actions actions--menu" id="actionsMenu" aria-label="Acciones">
+      <a class="btn btn--primary" href="./Currículum Vitae.pdf" download>Descargar PDF</a>
+      <button class="btn" id="btnPrint" type="button">Imprimir</button>
+      <button class="btn" id="btnTheme" type="button" aria-pressed="false">Modo</button>
+    </nav>
+  </div>
+</header>
 
   <main class="container">
     <section class="card hero">
